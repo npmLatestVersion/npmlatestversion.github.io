@@ -37,11 +37,24 @@
 </head>
 <body>
     <h1>npm latest version</h1>
+    <input type="text" value="npm" id="packageName">
     <h2 id="latest">6.9.0</h2>
     <p><a href="https://www.npmjs.com/package/npm">npm</a></p>
     <p>Run <code>npm install -g npm</code> to update!</p>
 </body>
 <script>
-    fetch('https://y8bpiklk4e.execute-api.us-east-1.amazonaws.com/dev/packages/npm').then(function(res) {console.log(res)})
+    let el = document.getElementById("packageName");
+    el.addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (event.keyCode === 13) {
+            var packageName = el.value
+            fetch(`https://y8bpiklk4e.execute-api.us-east-1.amazonaws.com/dev/packages/${packageName}`)
+                .then(function(res) {
+                    let latest = document.getElementById("latest");
+                    latest.innerHTML(res.json())
+                })
+        }
+    });
+    
 </script>
 </html>
