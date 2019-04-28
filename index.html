@@ -51,7 +51,7 @@
             fetch(`https://y8bpiklk4e.execute-api.us-east-1.amazonaws.com/dev/packages/${packageName}`)
                 .then(function(res) {
                     let latest = document.getElementById("latest");
-                    latest.innerHTML(res.json())
+                    latest.innerHTML = res.json()
                 })
         }
     });
