@@ -13,11 +13,34 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-137619746-2');
-      </script>
+    </script>
+    <style>
+        body {
+            margin: 40px auto;
+            max-width: 650px;
+            line-height: 1.6;
+            font-size: 18px;
+            color: #444;
+            padding: 0 10px
+          }
+ 
+          h1,
+          h2,
+          h3 {
+            line-height: 1.2
+          }
+
+          img {
+            width: 100%;
+          }
+    </style>
 </head>
 <body>
     <h1>npm latest version</h1>
     <h2 id="latest">6.9.0</h2>
     <p><a href="https://www.npmjs.com/package/npm">npm</a></p>
 </body>
+<script>
+    fetch('https://y8bpiklk4e.execute-api.us-east-1.amazonaws.com/dev/packages/npm').then(function(res) {console.log(res)})
+</script>
 </html>
