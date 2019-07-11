@@ -17,19 +17,14 @@
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container mx-auto">
+    <div class="container m-10 mx-auto max-w-2xl">
         <h1 class="text-6xl">npm latest version</h1>
-        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="packageName" type="text" placeholder="Search packages">
-        <br>
-        <br>
-        <div class="max-w-sm rounded overflow-hidden shadow-lg">
-            <div class="px-6 py-4">
-                <p class="font-bold text-xl mb-2"><a href="https://www.npmjs.com/package/npm">npm</a></p>
-                <p class="text-gray-700 text-base" id="latest"> Version: 6.9.0</p>
-                <p>Run <code>npm install -g npm</code> to update!</p>
-            </div>
+        <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="packageName" type="text" placeholder="Search packages">
+        <div class="p-3 mt-4 border-l-4">
+            <p class="font-bold text-xl mb-2"><a href="https://www.npmjs.com/package/npm">npm</a></p>
+            <p class="text-gray-700 text-base">Version: <span id="latest">6.9.0</span></p>
+            <p class="mt-3"><code class="bg-gray-200 px-3 py-1">npm install -g npm</code></p>
         </div>
-        
     </div>
 </body>
 <script>
